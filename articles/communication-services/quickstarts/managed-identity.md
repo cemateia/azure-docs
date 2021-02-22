@@ -67,6 +67,7 @@ Add the following `using` directives to your code to use the Azure Identity and 
 using Azure;
 using Azure.Core;
 using Azure.Identity;
+using Azure.Communication;
 using Azure.Communication.Administration;
 using Azure.Communication.Administration.Models;
 using Azure.Communication.Sms;
