@@ -64,9 +64,11 @@ dotnet add package Azure.Identity
 Add the following `using` directives to your code to use the Azure Identity and Azure Storage client libraries.
 
 ```csharp
+using Azure;
+using Azure.Core;
 using Azure.Identity;
-using Azure.Communication.Identity;
-using Azure.Communication.Configuration;
+using Azure.Communication.Administration;
+using Azure.Communication.Administration.Models;
 using Azure.Communication.Sms;
 ```
 
