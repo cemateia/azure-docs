@@ -54,8 +54,7 @@ To assign roles and permissions using PowerShell, see [Add or remove Azure role 
 ### Install the client library packages
 
 ```console
-dotnet add package Azure.Communication.Identity
-dotnet add package Azure.Communication.Configuration
+dotnet add package Azure.Communication.Administration
 dotnet add package Azure.Communication.Sms
 dotnet add package Azure.Identity
 ```
@@ -78,12 +77,13 @@ The examples below are using the [DefaultAzureCredential](https://docs.microsoft
 The following code example shows how to create a service client object with Azure Active Directory tokens, then use the client to issue a token for a new user:
 
 ```csharp
-     public async Task<Response<CommunicationUserToken>> CreateIdentityAndIssueTokenAsync(Uri resourceEdnpoint) 
+     public async Task<Response<CommunicationUserToken>> CreateIdentityAndIssueTokenAsync(Uri resourceEndpoint) 
      {
           TokenCredential credential = new DefaultAzureCredential();
      
           var client = new CommunicationIdentityClient(resourceEndpoint, credential);
           var identityResponse = await client.CreateUserAsync();
+          var identity = identityResponse.Value;
      
           var tokenResponse = await client.IssueTokenAsync(identity, scopes: new [] { CommunicationTokenScope.VoIP });
 
