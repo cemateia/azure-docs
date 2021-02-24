@@ -55,8 +55,9 @@ To assign roles and permissions using PowerShell, see [Add or remove Azure role 
 ### Install the client library packages
 
 ```console
-dotnet add package Azure.Communication.Administration
+dotnet add package Azure.Communication.Identity
 dotnet add package Azure.Communication.Sms
+dotnet add package Azure.Communication.Common
 dotnet add package Azure.Identity
 ```
 
