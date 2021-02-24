@@ -58,7 +58,6 @@ To assign roles and permissions using PowerShell, see [Add or remove Azure role 
 dotnet add package Azure.Identity
 dotnet add package Azure.Communication.Identity
 dotnet add package Azure.Communication.Sms
-dotnet add package Azure.Communication.Common
 ```
 
 ### Use the client library packages
@@ -69,6 +68,7 @@ Add the following `using` directives to your code to use the Azure Identity and 
 using Azure;
 using Azure.Core;
 using Azure.Identity;
+using Azure.Communication;
 using Azure.Communication.Identity;
 using Azure.Communication.Sms;
 ```
